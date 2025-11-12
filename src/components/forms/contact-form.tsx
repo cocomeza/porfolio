@@ -167,7 +167,7 @@ export function ContactForm() {
             <FormItem className="flex flex-row items-start space-x-3 space-y-0 rounded-2xl border border-border/60 bg-muted/50 p-4">
               <FormControl>
                 <Switch
-                  checked={field.value}
+                  checked={field.value ?? false}
                   onCheckedChange={field.onChange}
                   aria-label="Acepto el tratamiento de datos"
                 />
