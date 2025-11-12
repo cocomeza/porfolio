@@ -4,7 +4,8 @@ import { submitContactLead } from "@/actions/contact";
 import type { ContactFormInput } from "@/lib/validation/contact";
 
 // Mock de fetch global
-global.fetch = vi.fn();
+const mockFetch = vi.fn();
+global.fetch = mockFetch as typeof fetch;
 
 describe("submitContactLead", () => {
   beforeEach(() => {
@@ -60,17 +61,17 @@ describe("submitContactLead", () => {
     };
 
     // Mock de respuesta exitosa
-    (global.fetch as any).mockResolvedValueOnce({
+    mockFetch.mockResolvedValueOnce({
       ok: true,
       status: 200,
-    });
+    } as Response);
 
     const result = await submitContactLead(validData);
 
     expect(result.success).toBe(true);
     expect(result.fallback).toBe(true);
     expect(result.message).toContain("fallback");
-    expect(global.fetch).toHaveBeenCalledWith(
+    expect(mockFetch).toHaveBeenCalledWith(
       endpoint,
       expect.objectContaining({
         method: "POST",
@@ -94,10 +95,10 @@ describe("submitContactLead", () => {
     };
 
     // Mock de respuesta con error
-    (global.fetch as any).mockResolvedValueOnce({
+    mockFetch.mockResolvedValueOnce({
       ok: false,
       status: 500,
-    });
+    } as Response);
 
     const result = await submitContactLead(validData);
 
@@ -121,7 +122,7 @@ describe("submitContactLead", () => {
     };
 
     // Mock de error de red
-    (global.fetch as any).mockRejectedValueOnce(
+    mockFetch.mockRejectedValueOnce(
       new Error("Network error")
     );
 

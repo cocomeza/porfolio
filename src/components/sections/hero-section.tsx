@@ -44,7 +44,7 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.15, duration: 0.5 }}
         >
-          {["Next.js 14", "React", "TypeScript", "Supabase", "Tailwind CSS", "shadcn/ui", "Radix UI"].map((tech, index) => (
+          {["Next.js 14", "React", "TypeScript", "Supabase", "Tailwind CSS", "shadcn/ui", "Radix UI"].map((tech) => (
             <span
               key={tech}
               className="rounded-lg border border-blue-200 bg-white px-3.5 py-1.5 text-sm font-semibold text-gray-700 shadow-sm transition hover:border-blue-300 hover:shadow-md"
