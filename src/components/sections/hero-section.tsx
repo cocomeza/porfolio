@@ -83,7 +83,7 @@ export function HeroSection() {
             size="lg"
             className="w-full border-2 border-gray-300 bg-white font-semibold text-gray-700 transition hover:border-gray-400 hover:bg-gray-50 sm:w-auto"
           >
-            <Link href="/Maximiliano_Meza_CV_Dev.pdf" download>
+            <Link href="/Maximiliano_Meza_CV.Dev.pdf" download>
               Descargar CV
               <Download className="ml-2 h-4 w-4" aria-hidden="true" />
             </Link>

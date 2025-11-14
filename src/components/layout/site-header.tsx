@@ -45,7 +45,7 @@ export function SiteHeader() {
         </nav>
         <div className="hidden items-center gap-4 lg:flex">
           <a
-            href="/Maximiliano_Meza_CV_Dev.pdf"
+            href="/Maximiliano_Meza_CV.Dev.pdf"
             className="rounded-lg bg-gradient-to-r from-blue-600 to-indigo-600 px-4 py-2 text-sm font-semibold text-white shadow-md transition hover:from-blue-700 hover:to-indigo-700 hover:shadow-lg"
           >
             Descargar CV
@@ -92,7 +92,7 @@ export function SiteHeader() {
           })}
           <li>
             <a
-              href="/Maximiliano_Meza_CV_Dev.pdf"
+              href="/Maximiliano_Meza_CV.Dev.pdf"
               className="flex w-full rounded-lg bg-gradient-to-r from-blue-600 to-indigo-600 px-3 py-2 font-semibold text-white shadow-md transition hover:from-blue-700 hover:to-indigo-700"
               onClick={() => setIsMobileOpen(false)}
             >

@@ -34,7 +34,7 @@ test.describe('Navegación del sitio', () => {
     await page.goto('/');
     const cvLink = page.getByRole('link', { name: /Descargar CV/i });
     await expect(cvLink).toBeVisible();
-    await expect(cvLink).toHaveAttribute('href', '/Maximiliano_Meza_CV_Dev.pdf');
+    await expect(cvLink).toHaveAttribute('href', '/Maximiliano_Meza_CV.Dev.pdf');
   });
 
   test('debe tener menú móvil funcional', async ({ page }) => {
